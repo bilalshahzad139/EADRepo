@@ -1,0 +1,34 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ShowAll</title>
+</head>
+<body>
+    <h1>Students Display</h1>
+    <div>
+        @{
+            var list = ViewBag.Students as List<Entities.StudentDTO>;
+            <table>
+                @foreach (var obj in list)
+                {
+                    <tr>
+                        <td>@obj.ID</td>
+                        <td>@obj.Name</td>
+                        <td>@obj.City</td>
+                    </tr>
+                }
+
+
+            </table>
+
+        }
+
+    </div>
+</body>
+</html>

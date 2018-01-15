@@ -1,0 +1,30 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+</head>
+<body>
+    @{
+        //Razor Syntax
+        int a = 10;
+        int b = 20;
+        int c = a + b;
+        
+    }
+    <div>
+        <form action="/Student/Login" method="post">
+            Login: <input type="text" name="txtLogin" value="@ViewBag.UserName" /><br />
+            Password: <input type="password" name="txtPassword" /> <br />
+            <input type="submit" value="Login" /> 
+        </form>
+        <span>@ViewBag.Error</span>
+    </div>
+</body>
+</html>

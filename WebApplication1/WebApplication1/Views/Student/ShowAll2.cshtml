@@ -1,0 +1,39 @@
+﻿@model List<Entities.StudentDTO>
+@{
+    ViewBag.Title = "ShowAll2";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section  scripts {
+    <script>
+        $(document).ready(function () {
+
+            $("#btnTest").click(function () {
+                alert("tesrting");
+                return false;
+            });
+        });
+
+    </script>
+
+}
+
+
+<h2>ShowAll2</h2>
+
+<input type="button" id="btnTest" value="Click Me" />
+
+<table>
+    @foreach (var obj in Model)
+    {
+        <tr>
+            <td>@obj.ID</td>
+            <td>@obj.Name</td>
+            <td>@obj.City</td>
+            <td>@obj.Age</td>
+        </tr>
+    }
+
+
+</table>
+
